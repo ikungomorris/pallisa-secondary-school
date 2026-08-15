@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Digital Library | Pallisa Secondary School</title>
+
+    <meta name="description"
+          content="Pallisa Secondary School digital library with notes, textbooks, revision materials and learning resources.">
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <div class="top-bar">
+
+        <div class="container">
+            Pallisa Secondary School Digital Library
+        </div>
+
+    </div>
+
+
+    <div class="container navigation">
+
+
+        <a href="index.html"
+           class="logo-area">
+
+            <div class="school-logo">
+                PSS
+            </div>
+
+
+            <div>
+
+                <h1>
+                    Pallisa Secondary School
+                </h1>
+
+                <p>
+                    Knowledge • Discipline • Excellence
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <button class="menu-button"
+                onclick="toggleMenu()">
+
+            ☰
+
+        </button>
+
+
+        <nav id="main-menu">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="e-learning.html">
+                E-Learning
+            </a>
+
+            <a href="admissions.html">
+                Admissions
+            </a>
+
+            <a href="library.html"
+               class="active">
+                Library
+            </a>
+
+            <a href="news.html">
+                News
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero"
+         style="min-height:380px;">
+
+    <div class="container hero-content">
+
+        <p class="small-title">
+            DIGITAL RESOURCES
+        </p>
+
+        <h2>
+            Digital Library
+        </h2>
+
+        <p class="hero-text">
+            Find notes, textbooks, revision materials
+            and educational resources.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= SEARCH ================= -->
+
+<section class="services">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <p>
+                FIND A RESOURCE
+            </p>
+
+            <h2>
+                Search the Library
+            </h2>
+
+        </div>
+
+
+        <div class="library-search">
+
+            <input
+                type="search"
+                id="librarySearch"
+                placeholder="Search for Mathematics, Biology, ICT..."
+                onkeyup="searchLibrary()">
+
+
+            <button
+                class="button primary"
+                onclick="searchLibrary()">
+
+                Search
+
+            </button>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= LIBRARY RESOURCES ================= -->
+
+<section class="features">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <p>
+                LEARNING MATERIALS
+            </p>
+
+            <h2>
+                Available Resources
+            </h2>
+
+        </div>
+
+
+        <div class="library-grid"
+             id="libraryGrid">
+
+
+            <!-- MATHEMATICS -->
+
+            <div class="library-card"
+                 data-title="Mathematics Mathematics Notes Algebra Geometry">
+
+                <div class="library-icon">
+                    ➗
+                </div>
+
+                <h3>
+                    Mathematics
+                </h3>
+
+                <p>
+                    Mathematics notes, exercises,
+                    examples and revision resources.
+                </p>
+
+                <a href="#"
+                   class="button primary">
+
+                    Open Resource
+
+                </a>
+
+            </div>
+
+
+
+            <!-- BIOLOGY -->
+
+            <div class="library-card"
+                 data-title="Biology Cells Genetics Ecology Human Biology">
+
+                <div class="library-icon">
+                    🧬
+                </div>
+
+                <h3>
+                    Biology
+                </h3>
+
+                <p>
+                    Biology notes covering cells,
+                    ecology, genetics and life processes.
+                </p>
+
+                <a href="#"
+                   class="button primary">
+
+                    Open Resource
+
+                </a>
+
+            </div>
+
+
+
+            <!-- CHEMISTRY -->
+
+            <div class="library-card"
+                 data-title="Chemistry Matter Elements Compounds Laboratory">
+
+                <div class="library-icon">
+                    ⚗️
+                </div>
+
+                <h3>
+                    Chemistry
+                </h3>
+
+                <p>
+                    Chemistry notes, laboratory
+                    activities and revision materials.
+                </p>
+
+                <a href="#"
+                   class="button primary">
+
+                    Open Resource
+
+                </a>
+
+            </div>
+
+
+
+            <!-- PHYSICS -->
+
+            <div class="library-card"
+                 data-title="Physics Mechanics Electricity Light Waves">
+
+                <div class="library-icon">
+                    ⚡
+                </div>
+
+                <h3>
+                    Physics
+                </h3>
+
+                <p>
+                    Physics notes covering mechanics,
+                    electricity, light and waves.
+                </p>
+
+                <a href="#"
+                   class="button primary">
+
+                    Open Resource
+
+                </a>
+
+            </div>
+
+
+
+            <!-- GEOGRAPHY -->
+
+            <div class="library-card"
+                 data-title="Geography Physical Human Environment Maps">
+
+                <div class="library-icon">
+                    🌍
+                </div>
+
+                <h3>
+                    Geography
+                </h3>
+
+                <p>
+                    Physical geography, human geography,
+                    maps and environmental studies.
+                </p>
+
+                <a href="#"
+                   class="button primary">
+
+                    Open Resource
+
+                </a>
+
+            </div>
+
+
+
+            <!-- HISTORY -->
+
+            <div class="library-card"
+                 data-title="History Uganda Africa World History">
+
+                <div class="library-icon">
+                    🏛️
+                </div>
+
+                <h3>
+                    History
+                </h3>
+
+                <p>
+                    African, Ugandan and world history
+                    learning materials.
+                </p>
+
+                <a href="#"
+                   class="button primary">
+
+                    Open Resource
+
+                </a>
+
+            </div>
+
+
+
+            <!-- ICT -->
+
+            <div class="library-card"
+                 data-title="ICT Computer Hardware Software Programming">
+
+                <div class="library-icon">
+                    💻
+                </div>
+
+                <h3>
+                    ICT
+                </h3>
+
+                <p>
+                    Computer hardware, software,
+                    programming and digital skills.
+                </p>
+
+                <a href="#"
+                   class="button primary">
+
+                    Open Resource
+
+                </a>
+
+            </div>
+
+
+
+            <!-- ENGLISH -->
+
+            <div class="library-card"
+                 data-title="English Language Literature Grammar">
+
+                <div class="library-icon">
+                    📖
+                </div>
+
+                <h3>
+                    English
+                </h3>
+
+                <p>
+                    English language, grammar,
+                    comprehension and literature.
+                </p>
+
+                <a href="#"
+                   class="button primary">
+
+                    Open Resource
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- NO RESULTS -->
+
+        <p id="noResults"
+           style="display:none; text-align:center; margin-top:30px;">
+
+            No matching resources found.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= RESOURCE CATEGORIES ================= -->
+
+<section class="classes">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <p>
+                RESOURCE TYPES
+            </p>
+
+            <h2>
+                What You Can Find
+            </h2>
+
+        </div>
+
+
+        <div class="class-grid">
+
+
+            <a href="#">
+
+                <strong>
+                    📚
+                </strong>
+
+                <span>
+                    Textbooks
+                </span>
+
+            </a>
+
+
+            <a href="#">
+
+                <strong>
+                    📝
+                </strong>
+
+                <span>
+                    Notes
+                </span>
+
+            </a>
+
+
+            <a href="#">
+
+                <strong>
+                    📄
+                </strong>
+
+                <span>
+                    Past Papers
+                </span>
+
+            </a>
+
+
+            <a href="#">
+
+                <strong>
+                    🎯
+                </strong>
+
+                <span>
+                    Quizzes
+                </span>
+
+            </a>
+
+
+            <a href="#">
+
+                <strong>
+                    💻
+                </strong>
+
+                <span>
+                    ICT Resources
+                </span>
+
+            </a>
+
+
+            <a href="#">
+
+                <strong>
+                    🎥
+                </strong>
+
+                <span>
+                    Multimedia
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= OFFLINE ACCESS ================= -->
+
+<section class="about">
+
+    <div class="container about-grid">
+
+
+        <div class="about-text">
+
+            <p class="section-label">
+                LOW-BANDWIDTH LEARNING
+            </p>
+
+            <h2>
+                Learn Even With Limited Internet
+            </h2>
+
+            <p>
+
+                The digital library can be designed
+                to provide lightweight learning
+                materials that are easier to access
+                on mobile phones and slower internet
+                connections.
+
+            </p>
+
+            <p>
+
+                Selected resources can also be
+                prepared for offline access so that
+                learners can continue studying when
+                internet connectivity is unavailable.
+
+            </p>
+
+        </div>
+
+
+        <div class="school-highlight">
+
+            <div class="highlight-icon">
+                📱
+            </div>
+
+            <h3>
+                Mobile Friendly
+            </h3>
+
+            <p>
+                Designed to work on smartphones,
+                tablets and computers.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="container footer-grid">
+
+
+        <div>
+
+            <div class="footer-logo">
+                PSS
+            </div>
+
+            <h3>
+                Pallisa Secondary School
+            </h3>
+
+            <p>
+                Knowledge • Discipline • Excellence
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="e-learning.html">
+                E-Learning
+            </a>
+
+            <a href="admissions.html">
+                Admissions
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                Pallisa District, Uganda
+            </p>
+
+            <p>
+                Phone: +256 XXX XXX XXX
+            </p>
+
+            <p>
+                Email: info@example.com
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+        © <span id="year"></span>
+        Pallisa Secondary School.
+        All Rights Reserved.
+
+    </div>
+
+</footer>
+
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script src="js/script.js"></script>
+
+
+<script>
+
+function searchLibrary() {
+
+    const searchBox =
+        document.getElementById("librarySearch");
+
+    const searchText =
+        searchBox.value.toLowerCase().trim();
+
+    const cards =
+        document.querySelectorAll(".library-card");
+
+    const noResults =
+        document.getElementById("noResults");
+
+    let found = 0;
+
+
+    cards.forEach(function(card) {
+
+        const title =
+            card.getAttribute("data-title")
+                .toLowerCase();
+
+
+        if (title.includes(searchText)) {
+
+            card.style.display = "block";
+
+            found++;
+
+        } else {
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+
+    if (found === 0) {
+
+        noResults.style.display = "block";
+
+    } else {
+
+        noResults.style.display = "none";
+
+    }
+
+}
+
+</script>
+
+
+</body>
+
+              </html>
