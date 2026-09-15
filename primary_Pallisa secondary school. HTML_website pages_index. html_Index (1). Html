@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pallisa High School Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Pallisa High School</h1>
+    <p>Knowledge, Discipline and Excellence</p>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#academics">Academics</a>
+        <a href="#elearning">E-Learning</a>
+        <a href="#admission">Admissions</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+
+<section id="home" class="hero">
+    <h2>Welcome to Pallisa High School</h2>
+    <p>
+        A centre of academic excellence empowering learners
+        through quality education and technology.
+    </p>
+    <button>Apply Now</button>
+</section>
+
+
+<section id="about">
+    <h2>About Us</h2>
+    <p>
+        Pallisa High School is committed to providing quality
+        education, discipline and innovation.
+    </p>
+
+    <h3>Vision</h3>
+    <p>To be a leading centre of excellence in education.</p>
+
+    <h3>Mission</h3>
+    <p>
+        To develop responsible citizens through quality learning.
+    </p>
+</section>
+
+
+<section id="academics">
+    <h2>Academics</h2>
+
+    <div class="cards">
+        <div>
+            <h3>Senior One - Senior Four</h3>
+            <p>Science, Humanities and ICT subjects.</p>
+        </div>
+
+        <div>
+            <h3>Senior Five - Senior Six</h3>
+            <p>
+            Advanced level subject combinations and career guidance.
+            </p>
+        </div>
+    </div>
+</section>
+
+
+<section id="elearning">
+    <h2>E-Learning Platform</h2>
+
+    <div class="cards">
+        <div>
+            <h3>Student Portal</h3>
+            <p>Access notes, videos, assignments and assessments.</p>
+        </div>
+
+        <div>
+            <h3>Teacher Portal</h3>
+            <p>Upload lessons and monitor learners.</p>
+        </div>
+    </div>
+</section>
+
+
+<section id="admission">
+<h2>Online Admission</h2>
+
+<form>
+<input type="text" placeholder="Surname">
+<input type="text" placeholder="Other Names">
+<input type="email" placeholder="Email">
+<input type="tel" placeholder="Phone Contact">
+
+<select>
+<option>Select Class</option>
+<option>S.1</option>
+<option>S.2</option>
+<option>S.3</option>
+<option>S.4</option>
+<option>S.5</option>
+<option>S.6</option>
+</select>
+
+<button type="submit">Submit Application</button>
+
+</form>
+
+</section>
+
+
+<section id="news">
+<h2>News & Events</h2>
+
+<ul>
+<li>Academic updates</li>
+<li>Sports activities</li>
+<li>School announcements</li>
+</ul>
+
+</section>
+
+
+<section id="contact">
+<h2>Contact Us</h2>
+
+<p>
+Pallisa High School<br>
+Pallisa District, Uganda
+</p>
+
+</section>
+
+
+<div class="ai">
+<button>Ask AI</button>
+</div>
+
+
+<footer>
+<p>
+© 2026 Pallisa High School Portal
+</p>
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
