@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pallisa High School - E-Learning Portal</title>
+
+<style>
+
+/* =========================================================
+   PALLISA HIGH SCHOOL E-LEARNING PORTAL
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #343a40;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.elearning-header {
+    background: linear-gradient(135deg, #007bff, #003f88);
+    color: white;
+    text-align: center;
+    padding: 55px 20px;
+}
+
+.elearning-header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.elearning-header p {
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   SEARCH PANEL
+   ========================================================= */
+
+.search-area {
+
+    background: white;
+
+    width: 92%;
+    max-width: 950px;
+
+    margin: -30px auto 40px;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 5px 25px rgba(0,0,0,0.12);
+
+    position: relative;
+}
+
+.search-area h2 {
+
+    text-align: center;
+
+    color: #007bff;
+
+    margin-top: 0;
+}
+
+
+/* SEARCH INPUT */
+
+#resourceSearch {
+
+    width: 100%;
+
+    padding: 17px 20px;
+
+    border: 2px solid #007bff;
+
+    border-radius: 10px;
+
+    font-size: 17px;
+
+    outline: none;
+
+    margin-bottom: 15px;
+}
+
+#resourceSearch:focus {
+
+    border-color: #004a99;
+
+    box-shadow:
+        0 0 5px rgba(0,123,255,0.3);
+}
+
+
+/* =========================================================
+   LEVEL SELECT
+   ========================================================= */
+
+.search-selects {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(200px, 1fr));
+
+    gap: 12px;
+
+    margin-bottom: 15px;
+}
+
+.search-selects select {
+
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    background: white;
+}
+
+
+/* =========================================================
+   SEARCH BUTTONS
+   ========================================================= */
+
+.search-buttons {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    justify-content: center;
+
+    margin-top: 15px;
+}
+
+.search-buttons button {
+
+    border: none;
+
+    padding: 12px 18px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    color: white;
+
+    font-weight: bold;
+
+    font-size: 14px;
+}
+
+.search-btn {
+    background: #007bff;
+}
+
+.books-btn {
+    background: #28a745;
+}
+
+.notes-btn {
+    background: #6f42c1;
+}
+
+.videos-btn {
+    background: #dc3545;
+}
+
+.ncdc-btn {
+    background: #343a40;
+}
+
+.all-btn {
+    background: #17a2b8;
+}
+
+.clear-btn {
+    background: #6c757d;
+}
+
+.search-buttons button:hover {
+
+    opacity: 0.85;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   SEARCH STATUS
+   ========================================================= */
+
+.search-status {
+
+    text-align: center;
+
+    margin-top: 20px;
+
+    color: #555;
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   RESULTS
+   ========================================================= */
+
+#searchResults {
+
+    width: 92%;
+
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+#resultsContainer {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 20px;
+}
+
+
+/* RESOURCE CARD */
+
+.resource-result {
+
+    background: white;
+
+    padding: 22px;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 4px 15px rgba(0,0,0,0.08);
+
+    border-left: 5px solid #007bff;
+
+    transition: 0.3s;
+}
+
+.resource-result:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 8px 22px rgba(0,0,0,0.12);
+}
+
+.resource-result h3 {
+
+    color: #007bff;
+
+    margin-top: 8px;
+}
+
+.resource-result p {
+
+    color: #555;
+
+    line-height: 1.5;
+}
+
+
+/* RESOURCE TYPE */
+
+.resource-type {
+
+    display: inline-block;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    background: #e9f3ff;
+
+    color: #007bff;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+/* OPEN RESOURCE BUTTON */
+
+.open-resource {
+
+    display: block;
+
+    text-decoration: none;
+
+    text-align: center;
+
+    background: #007bff;
+
+    color: white;
+
+    padding: 11px;
+
+    border-radius: 7px;
+
+    margin-top: 15px;
+
+    font-weight: bold;
+}
+
+.open-resource:hover {
+
+    background: #0056b3;
+}
+
+
+/* =========================================================
+   NO RESULTS
+   ========================================================= */
+
+.no-results {
+
+    grid-column: 1 / -1;
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    color: #666;
+}
+
+
+/* =========================================================
+   SUBJECTS
+   ========================================================= */
+
+.subject-section {
+
+    width: 92%;
+
+    max-width: 1200px;
+
+    margin: 60px auto;
+}
+
+.subject-section > h2 {
+
+    text-align: center;
+
+    color: #343a40;
+
+    margin-bottom: 30px;
+}
+
+.subject-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(260px, 1fr));
+
+    gap: 25px;
+}
+
+
+/* SUBJECT CARD */
+
+.subject-card {
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 4px 18px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+.subject-card:hover {
+
+    transform: translateY(-5px);
+}
+
+.subject-icon {
+
+    font-size: 42px;
+}
+
+.subject-card h3 {
+
+    margin: 10px 0;
+
+    color: #343a40;
+}
+
+.subject-card p {
+
+    color: #666;
+
+    line-height: 1.5;
+}
+
+.subject-card a {
+
+    display: block;
+
+    text-decoration: none;
+
+    padding: 10px;
+
+    margin-top: 9px;
+
+    text-align: center;
+
+    background: #007bff;
+
+    color: white;
+
+    border-radius: 6px;
+}
+
+.subject-card a:hover {
+
+    background: #0056b3;
+}
+
+
+/* =========================================================
+   OFFICIAL RESOURCES
+   ========================================================= */
+
+.official-resources {
+
+    width: 92%;
+
+    max-width: 1100px;
+
+    margin: 60px auto;
+
+    padding: 35px;
+
+    background: #343a40;
+
+    color: white;
+
+    border-radius: 15px;
+}
+
+.official-resources h2 {
+
+    text-align: center;
+}
+
+.official-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(230px, 1fr));
+
+    gap: 15px;
+
+    margin-top: 25px;
+}
+
+.official-grid a {
+
+    background: white;
+
+    color: #343a40;
+
+    text-decoration: none;
+
+    padding: 15px;
+
+    border-radius: 8px;
+
+    text-align: center;
+
+    font-weight: bold;
+}
+
+.official-grid a:hover {
+
+    background: #007bff;
+
+    color: white;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media(max-width:600px) {
+
+    .elearning-header h1 {
+
+        font-size: 27px;
+    }
+
+    .search-area {
+
+        width: 94%;
+
+        padding: 20px;
+    }
+
+    #searchResults {
+
+        width: 94%;
+    }
+
+    .subject-section {
+
+        width: 94%;
+    }
+
+    .official-resources {
+
+        width: 94%;
+    }
+
+    .search-buttons button {
+
+        width: 100%;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+     ========================================================= -->
+
+<header class="elearning-header">
+
+    <h1>
+        🎓 Pallisa High School
+    </h1>
+
+    <p>
+        E-Learning & Digital Resource Centre
+    </p>
+
+    <p>
+        Learn • Research • Practise • Innovate
+    </p>
+
+</header>
+
+
+
+<!-- =========================================================
+     SEARCH AREA
+     ========================================================= -->
+
+<section class="search-area">
+
+    <h2>
+        🔎 Search Learning Resources
+    </h2>
+
+
+    <!-- SEARCH INPUT -->
+
+    <input
+        type="text"
+        id="resourceSearch"
+        placeholder="Type a book, note, topic or subject..."
+    >
+
+
+    <!-- LEVEL AND RESOURCE TYPE -->
+
+    <div class="search-selects">
+
+        <select id="levelSelect">
+
+            <option value="all">
+                All Levels
+            </option>
+
+            <option value="S1">
+                S.1
+            </option>
+
+            <option value="S2">
+                S.2
+            </option>
+
+            <option value="S3">
+                S.3
+            </option>
+
+            <option value="S4">
+                S.4
+            </option>
+
+            <option value="S5">
+                S.5
+            </option>
+
+            <option value="S6">
+                S.6
+            </option>
+
+        </select>
+
+
+        <select id="subjectSelect">
+
+            <option value="all">
+                All Subjects
+            </option>
+
+            <option value="Mathematics">
+                Mathematics
+            </option>
+
+            <option value="English">
+                English
+            </option>
+
+            <option value="Biology">
+                Biology
+            </option>
+
+            <option value="Chemistry">
+                Chemistry
+            </option>
+
+            <option value="Physics">
+                Physics
+            </option>
+
+            <option value="Geography">
+                Geography
+            </option>
+
+            <option value="History">
+                History
+            </option>
+
+            <option value="ICT">
+                ICT
+            </option>
+
+            <option value="Entrepreneurship">
+                Entrepreneurship
+            </option>
+
+            <option value="Agriculture">
+                Agriculture
+            </option>
+
+            <option value="CRE">
+                CRE
+            </option>
+
+            <option value="IRE">
+                IRE
+            </option>
+
+            <option value="Kiswahili">
+                Kiswahili
+            </option>
+
+            <option value="Literature">
+                Literature
+            </option>
+
+            <option value="Art">
+                Art & Design
+            </option>
+
+            <option value="French">
+                French
+            </option>
+
+            <option value="German">
+                German
+            </option>
+
+            <option value="Arabic">
+                Arabic
+            </option>
+
+        </select>
+
+
+        <select id="typeSelect">
+
+            <option value="all">
+                All Resources
+            </option>
+
+            <option value="Book">
+                📚 Books
+            </option>
+
+            <option value="Notes">
+                📝 Notes
+            </option>
+
+            <option value="Video">
+                ▶ Videos
+            </option>
+
+            <option value="Revision">
+                📄 Revision
+            </option>
+
+            <option value="NCDC">
+                🏫 NCDC
+            </option>
+
+        </select>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         BUTTONS
+         ===================================================== -->
+
+    <div class="search-buttons">
+
+        <button
+            class="search-btn"
+            onclick="submitSearch()">
+
+            🔎 SEARCH / SUBMIT
+
+        </button>
+
+
+        <button
+            class="books-btn"
+            onclick="searchByType('Book')">
+
+            📚 BOOKS
+
+        </button>
+
+
+        <button
+            class="notes-btn"
+            onclick="searchByType('Notes')">
+
+            📝 NOTES
+
+        </button>
+
+
+        <button
+            class="videos-btn"
+            onclick="searchByType('Video')">
+
+            ▶ VIDEOS
+
+        </button>
+
+
+        <button
+            class="ncdc-btn"
+            onclick="searchByType('NCDC')">
+
+            🏫 NCDC
+
+        </button>
+
+
+        <button
+            class="all-btn"
+            onclick="showAllResources()">
+
+            📚 ALL
+
+        </button>
+
+
+        <button
+            class="clear-btn"
+            onclick="clearSearch()">
+
+            ✖ CLEAR
+
+        </button>
+
+    </div>
+
+
+    <div
+        id="searchStatus"
+        class="search-status">
+
+        Search for books, notes, topics or subjects.
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SEARCH RESULTS
+     ========================================================= -->
+
+<section id="searchResults">
+
+    <h2>
+        📚 Learning Resources
+    </h2>
+
+
+    <div id="resultsContainer"></div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SUBJECTS
+     ========================================================= -->
+
+<section class="subject-section">
+
+<h2>
+    📖 Explore Subjects
+</h2>
+
+
+<div class="subject-grid">
+
+
+
+<!-- MATHEMATICS -->
+
+<div class="subject-card">
+
+<div class="subject-icon">📐</div>
+
+<h3>Mathematics</h3>
+
+<p>
+Numbers, algebra, geometry, statistics,
+graphs and problem solving.
+</p>
+
+<a
+href="https://ncdc.go.ug/?s=Mathematics"
+target="_blank">
+
+📚 Mathematics Resources
+
+</a>
+
+<a
+href="https://www.khanacademy.org/math"
+target="_blank">
+
+🧠 Mathematics Lessons
+
+</a>
+
+<a
+href="https://www.youtube.com/results?search_query=Uganda+secondary+mathematics"
+target="_blank">
+
+▶ Mathematics Videos
+
+</a>
+
+</div>
+
+
+
+<!-- ENGLISH -->
+
+<div class="subject-card">
+
+<div class="subject-icon">📖</div>
+
+<h3>English Language</h3>
+
+<p>
+Grammar, comprehension, writing,
+speaking and communication.
+</p>
+
+<a
+href="https://ncdc.go.ug/?s=English"
+target="_blank">
+
+📚 English Resources
+
+</a>
+
+<a
+href="https://www.khanacademy.org/humanities/grammar"
+target="_blank">
+
+🧠 Grammar Lessons
+
+</a>
+
+<a
+href="https://www.youtube.com/results?search_query=Uganda+secondary+English"
+target="_blank">
+
+▶ English Videos
+
+</a>
+
+</div>
+
+
+
+<!-- BIOLOGY -->
+
+<div class="subject-card">
+
+<div class="subject-icon">🧬</div>
+
+<h3>Biology</h3>
+
+<p>
+Cells, ecology, genetics, human biology,
+plants and practical experiments.
+</p>
+
+<a
+href="https://ncdc.go.ug/?s=Biology"
+target="_blank">
+
+📚 Biology Resources
+
+</a>
+
+<a
+href="https://www.khanacademy.org/science/biology"
+target="_blank">
+
+🧠 Biology Lessons
+
+</a>
+
+<a
+href="https://www.youtube.com/results?search_query=Uganda+secondary+Biology"
+target="_blank">
+
+▶ Biology Videos
+
+</a>
+
+</div>
+
+
+
+<!-- CHEMISTRY -->
+
+<div class="subject-card">
+
+<div class="subject-icon">⚗️</div>
+
+<h3>Chemistry</h3>
+
+<p>
+Atoms, reactions, acids, bases,
+organic chemistry and practical work.
+</p>
+
+<a
+href="https://ncdc.go.ug/?s=Chemistry"
+target="_blank">
+
+📚 Chemistry Resources
+
+</a>
+
+<a
+href="https://www.khanacademy.org/science/chemistry"
+target="_blank">
+
+🧠 Chemistry Lessons
+
+</a>
+
+<a
+href="https://www.youtube.com/results?search_query=Uganda+secondary+Chemistry"
+target="_blank">
+
+▶ Chemistry Videos
+
+</a>
+
+</div>
+
+
+
+<!-- PHYSICS -->
+
+<div class="subject-card">
+
+<div class="subject-icon">⚡</div>
+
+<h3>Physics</h3>
+
+<p>
+Mechanics, electricity, waves,
+heat, light and energy.
+</p>
+
+<a
+href="https://ncdc.go.ug/?s=Physics"
+target="_blank">
+
+📚 Physics Resources
+
+</a>
+
+<a
+href="https://www.khanacademy.org/science/physics"
+target="_blank">
+
+🧠 Physics Lessons
+
+</a>
+
+<a
+href="https://www.youtube.com/results?search_query=Uganda+secondary+Physics"
+target="_blank">
+
+▶ Physics Videos
+
+</a>
+
+</div>
+
+
+
+<!-- GEOGRAPHY -->
+
+<div class="subject-card">
+
+<div class="subject-icon">🌍</div>
+
+<h3>Geography</h3>
+
+<p>
+Physical geography, human geography,
+maps, environment and development.
+</p>
+
+<a
+href="https://ncdc.go.ug/?s=Geography"
+target="_blank">
+
+📚 Geography Resources
+
+</a>
+
+<a
+href="https://www.youtube.com/results?search_query=Uganda+secondary+Geography"
+target="_blank">
+
+▶ Geography Videos
+
+</a>
+
+</div>
+
+
+
+<!-- HISTORY -->
+
+<div class="subject-card">
+
+<div class="subject-icon">🏛️</div>
+
+<h3>History & Political Education</h3>
+
+<p>
+Ugandan, African and world history,
+citizenship and political education.
+</p>
+
+<a
+href="https://ncdc.go.ug/?s=History"
+target="_blank">
+
+📚 History Resources
+
+</a>
+
+<a
+href="https://www.youtube.com/results?search_query=Uganda+secondary+History"
+target="_blank">
+
+▶ History Videos
+
+</a>
+
+</div>
+
+
+
+<!-- ICT -->
+
+<div class="subject-card">
+
+<div class="subject-icon">💻</div>
+
+<h3>ICT</h3>
+
+<p>
+Computer systems, applications,
+programming, databases and digital skills.
+</p>
+
+<a
+href="https://ncdc.go.ug/?s=ICT"
+target="_blank">
+
+📚 ICT Resources
+
+</a>
+
+<a
+href="https://www.khanacademy.org/computing"
+target="_blank">
+
+🧠 Computer Science
+
+</a>
+
+<a
+href="https://www.youtube.com/results?search_query=Uganda+secondary+ICT"
+target="_blank">
+
+▶ ICT Videos
+
+</a>
+
+</div>
+
+
+
+<!-- ENTREPRENEURSHIP -->
+
+<div class="subject-card">
+
+<div class="subject-icon">💼</div>
+
+<h3>Entrepreneurship</h3>
+
+<p>
+Business ideas, innovation,
+financial literacy and enterprise.
+</p>
+
+<a
+href="https://ncdc.go.ug/?s=Entrepreneurship"
+target="_blank">
+
+📚 Entrepreneurship Resources
+
+</a>
+
+<a
+href="https://www.youtube.com/results?search_query=Uganda+secondary+Entrepreneurship"
+target="_blank">
+
+▶ Entrepreneurship Videos
+
+</a>
+
+</div>
+
+
+
+<!-- AGRICULTURE -->
+
+<div class="subject-card">
+
+<div class="subject-icon">🌱</div>
+
+<h3>Agriculture</h3>
+
+<p>
+Crop production, livestock,
+agribusiness and farming.
+</p>
+
+<a
+href="https://ncdc.go.ug/?s=Agriculture"
+target="_blank">
+
+📚 Agriculture Resources
+
+</a>
+
+<a
+href="https://www.youtube.com/results?search_query=Uganda+secondary+Agriculture"
+target="_blank">
+
+▶ Agriculture Videos
+
+</a>
+
+</div>
+
+
+
+<!-- CRE -->
+
+<div class="subject-card">
+
+<div class="subject-icon">✝️</div>
+
+<h3>Christian Religious Education</h3>
+
+<p>
+Biblical studies, Christian values,
+morality and Christian living.
+</p>
+
+<a
+href="https://ncdc.go.ug/?s=CRE"
+target="_blank">
+
+📚 CRE Resources
+
+</a>
+
+<a
+href="https://www.youtube.com/results?search_query=Uganda+secondary+CRE"
+target="_blank">
+
+▶ CRE Videos
+
+</a>
+
+</div>
+
+
+
+<!-- IRE -->
+
+<div class="subject-card">
+
+<div class="subject-icon">☪️</div>
+
+<h3>Islamic Religious Education</h3>
+
+<p>
+Qur'an, Hadith, Islamic values,
+history and Islamic teachings.
+</p>
+
+<a
+href="https://ncdc.go.ug/?s=IRE"
+target="_blank">
+
+📚 IRE Resources
+
+</a>
+
+<a
+href="https://www.youtube.com/results?search_query=Uganda+secondary+IRE"
+target="_blank">
+
+▶ IRE Videos
+
+</a>
+
+</div>
+
+
+
+<!-- KISWAHILI -->
+
+<div class="subject-card">
+
+<div class="subject-icon">🗣️</div>
+
+<h3>Kiswahili</h3>
+
+<p>
+Sarufi, fasihi, mawasiliano
+na matumizi ya Kiswahili.
+</p>
+
+<a
+href="https://ncdc.go.ug/?s=Kiswahili"
+target="_blank">
+
+📚 Kiswahili Resources
+
+</a>
+
+<a
+href="https://www.youtube.com/results?search_query=Uganda+secondary+Kiswahili"
+target="_blank">
+
+▶ Kiswahili Videos
+
+</a>
+
+</div>
+
+
+
+<!-- LITERATURE -->
+
+<div class="subject-card">
+
+<div class="subject-icon">📚</div>
+
+<h3>Literature in English</h3>
+
+<p>
+Poetry, prose, drama and
+literary analysis.
+</p>
+
+<a
+href="https://ncdc.go.ug/?s=Literature"
+target="_blank">
+
+📚 Literature Resources
+
+</a>
+
+<a
+href="https://www.youtube.com/results?search_query=Uganda+A+Level+Literature"
+target="_blank">
+
+▶ Literature Videos
+
+</a>
+
+</div>
+
+
+
+<!-- ART -->
+
+<div class="subject-card">
+
+<div class="subject-icon">🎨</div>
+
+<h3>Art & Design</h3>
+
+<p>
+Drawing, painting, design,
+creativity and visual communication.
+</p>
+
+<a
+href="https://ncdc.go.ug/?s=Art+Design"
+target="_blank">
+
+📚 Art Resources
+
+</a>
+
+<a
+href="https://www.youtube.com/results?search_query=Uganda+secondary+Art+Design"
+target="_blank">
+
+▶ Art Videos
+
+</a>
+
+</div>
+
+
+
+<!-- PERFORMING ARTS -->
+
+<div class="subject-card">
+
+<div class="subject-icon">🎭</div>
+
+<h3>Performing Arts</h3>
+
+<p>
+Music, dance, drama,
+performance and creative expression.
+</p>
+
+<a
+href="https://ncdc.go.ug/?s=Performing+Arts"
+target="_blank">
+
+📚 Performing Arts Resources
+
+</a>
+
+<a
+href="https://www.youtube.com/results?search_query=Uganda+secondary+Performing+Arts"
+target="_blank">
+
+▶ Performing Arts Videos
+
+</a>
+
+</div>
+
+
+
+<!-- PE -->
+
+<div class="subject-card">
+
+<div class="subject-icon">🏃</div>
+
+<h3>Physical Education<

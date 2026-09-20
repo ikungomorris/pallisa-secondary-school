@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Separation of Mixtures | Pallisa Secondary School</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f7f9;
+            color: #222;
+        }
+
+        header {
+            background: #123b5d;
+            color: white;
+            padding: 18px;
+        }
+
+        .header-content {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 22px;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 13px;
+        }
+
+        .back-button {
+            color: white;
+            text-decoration: none;
+            border: 1px solid white;
+            padding: 9px 14px;
+            border-radius: 6px;
+        }
+
+        .hero {
+            background: white;
+            padding: 45px 20px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            margin: 0 0 10px;
+            font-size: 32px;
+        }
+
+        .hero p {
+            max-width: 750px;
+            margin: auto;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 25px 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        }
+
+        .card h3 {
+            color: #123b5d;
+            margin-top: 0;
+        }
+
+        .lab-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .control-box {
+            background: #eef4f8;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #bbb;
+            border-radius: 6px;
+            background: white;
+            margin-bottom: 20px;
+        }
+
+        button {
+            border: none;
+            padding: 12px 18px;
+            border-radius: 7px;
+            cursor: pointer;
+            font-weight: bold;
+            margin: 5px;
+        }
+
+        .primary {
+            background: #123b5d;
+            color: white;
+        }
+
+        .secondary {
+            background: #ddd;
+            color: #222;
+        }
+
+        .experiment-stage {
+            min-height: 350px;
+            background: #f8fafb;
+            border: 2px dashed #aaa;
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .equipment {
+            font-size: 80px;
+            margin: 20px;
+        }
+
+        .step-number {
+            display: inline-flex;
+            width: 40px;
+            height: 40px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #123b5d;
+            color: white;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .progress {
+            width: 100%;
+            height: 18px;
+            background: #ddd;
+            border-radius: 20px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 0%;
+            background: #123b5d;
+            transition: width 0.5s;
+        }
+
+        .result {
+            padding: 18px;
+            background: #eef7ee;
+            border-left: 5px solid #3b7d3b;
+            line-height: 1.7;
+            margin-top: 20px;
+        }
+
+        .warning {
+            padding: 18px;
+            background: #fff3cd;
+            border-radius: 8px;
+            line-height: 1.7;
+        }
+
+        .quiz-question {
+            margin-bottom: 25px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 15px;
+        }
+
+        .quiz-question label {
+            font-weight: normal;
+            margin: 8px 0;
+        }
+
+        .score {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        footer {
+            background: #123b5d;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media (max-width: 750px) {
+
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .lab-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="header-content">
+
+        <div>
+
+            <h1>
+                Pallisa Secondary School
+            </h1>
+
+            <p>
+                Virtual Laboratory — Chemistry
+            </p>
+
+        </div>
+
+        <a href="../../virtual-lab.html"
+           class="back-button">
+
+            ← Virtual Lab
+
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<section class="hero">
+
+    <h2>
+        🧪 Separation of Mixtures
+    </h2>
+
+    <p>
+
+        Learn how different physical methods are
+        used to separate components of mixtures.
+
+    </p>
+
+</section>
+
+
+
+<main class="container">
+
+
+<!-- AIM -->
+
+<section class="card">
+
+    <h3>
+        Aim
+    </h3>
+
+    <p>
+
+        To identify suitable methods for separating
+        different mixtures and understand the
+        scientific principles behind each method.
+
+    </p>
+
+</section>
+
+
+
+<!-- METHODS -->
+
+<section class="card">
+
+    <h3>
+        Separation Methods
+    </h3>
+
+    <ul>
+
+        <li>
+            <strong>Filtration</strong> —
+            separates an insoluble solid from a liquid.
+        </li>
+
+        <li>
+            <strong>Evaporation</strong> —
+            separates a dissolved solid from a solution.
+        </li>
+
+        <li>
+            <strong>Distillation</strong> —
+            separates substances based on differences
+            in boiling points.
+        </li>
+
+        <li>
+            <strong>Chromatography</strong> —
+            separates components of a mixture based
+            on their movement through a medium.
+        </li>
+
+    </ul>
+
+</section>
+
+
+
+<!-- INTERACTIVE LAB -->
+
+<section class="card">
+
+    <h3>
+        Interactive Laboratory
+    </h3>
+
+
+    <div class="lab-grid">
+
+
+        <div class="control-box">
+
+            <label for="mixture">
+
+                Select a mixture:
+
+            </label>
+
+
+            <select id="mixture"
+                    onchange="changeMixture()">
+
+                <option value="sandwater">
+                    Sand + Water
+                </option>
+
+                <option value="saltwater">
+                    Salt + Water
+                </option>
+
+                <option value="ink">
+                    Ink / Dye Mixture
+                </option>
+
+                <option value="ethanolwater">
+                    Ethanol + Water
+                </option>
+
+            </select>
+
+
+            <label for="method">
+
+                Select separation method:
+
+            </label>
+
+
+            <select id="method">
+
+                <option value="filtration">
+                    Filtration
+                </option>
+
+                <option value="evaporation">
+                    Evaporation
+                </option>
+
+                <option value="distillation">
+                    Distillation
+                </option>
+
+                <option value="chromatography">
+                    Chromatography
+                </option>
+
+            </select>
+
+
+            <button class="primary"
+                    onclick="startExperiment()">
+
+                Start Experiment
+
+            </button>
+
+
+            <button class="secondary"
+                    onclick="resetExperiment()">
+
+                Reset
+
+            </button>
+
+        </div>
+
+
+
+        <div class="experiment-stage">
+
+            <div class="equipment"
+                 id="equipment">
+
+                🧪
+
+            </div>
+
+
+            <h3 id="stageTitle">
+
+                Ready for Experiment
+
+            </h3>
+
+
+            <p id="stageDescription">
+
+                Select a mixture and separation
+                method, then start the experiment.
+
+            </p>
+
+
+            <div class="progress">
+
+                <div class="progress-bar"
+                     id="progressBar">
+
+                </div>
+
+            </div>
+
+
+            <p id="stepText">
+
+                Step 0 of 4
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- OBSERVATION -->
+
+<section class="card">
+
+    <h3>
+        Observation
+    </h3>
+
+
+    <div class="result"
+         id="observation">
+
+        Your experimental observation
+        will appear here.
+
+    </div>
+
+</section>
+
+
+
+<!-- CONCLUSION -->
+
+<section class="card">
+
+    <h3>
+        Conclusion
+    </h3>
+
+
+    <p id="conclusion">
+
+        Select an appropriate separation method
+        and complete the virtual experiment.
+
+    </p>
+
+</section>
+
+
+
+<!-- SAFETY -->
+
+<section class="card">
+
+    <h3>
+        ⚠️ Laboratory Safety
+    </h3>
+
+
+    <div class="warning">
+
+        Virtual experiments are simulations.
+        For physical experiments, always work
+        under teacher supervision and use
+        appropriate laboratory safety equipment.
+
+        Never heat substances or handle chemicals
+        without proper instruction.
+
+    </div>
+
+</section>
+
+
+
+<!-- QUIZ -->
+
+<section class="card">
+
+    <h3>
+        📝 Separation of Mixtures Quiz
+    </h3>
+
+
+    <form id="quizForm">
+
+
+        <div class="quiz-question">
+
+            <p>
+                <strong>
+                    1. Which method separates sand from water?
+                </strong>
+            </p>
+
+            <label>
+                <input type="radio"
+                       name="q1"
+                       value="a">
+                Filtration
+            </label>
+
+            <label>
+                <input type="radio"
+                       name="q1"
+                       value="b">
+                Distillation
+            </label>
+
+            <label>
+                <input type="radio"
+                       name="q1"
+                       value="c">
+                Chromatography
+            </label>
+
+        </div>
+
+
+
+        <div class="quiz-question">
+
+            <p>
+                <strong>
+                    2. Which method can recover salt
+                    from salt solution?
+                </strong>
+            </p>
+
+            <label>
+                <input type="radio"
+                       name="q2"
+                       value="a">
+                Filtration
+            </label>
+
+            <label>
+                <input type="radio"
+                       name="q2"
+                       value="b">
+                Evaporation
+            </label>
+
+            <label>
+                <input type="radio"
+                       name="q2"
+                       value="c">
+                Sieving
+            </label>
+
+        </div>
+
+
+
+        <div class="quiz-question">
+
+            <p>
+                <strong>
+                    3. Chromatography is useful for separating:
+                </strong>
+            </p>
+
+            <label>
+                <input type="radio"
+                       name="q3"
+                       value="a">
+                Different components of a dye mixture
+            </label>
+
+            <label>
+                <input type="radio"
+                       name="q3"
+                       value="b">
+                Large stones from soil only
+            </label>
+
+            <label>
+                <input type="radio"
+                       name="q3"
+                       value="c">
+                Sand from water only
+            </label>
+
+        </div>
+
+
+
+        <button type="button"
+                class="primary"
+                onclick="markQuiz()">
+
+            Submit Quiz
+
+        </button>
+
+
+        <button type="button"
+                class="secondary"
+                onclick="resetQuiz()">
+
+            Reset Quiz
+
+        </button>
+
+
+    </form>
+
+
+    <div id="quizResult"
+         class="score">
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<footer>
+
+    <p>
+        © <span id="year"></span>
+        Pallisa Secondary School
+    </p>
+
+    <p>
+        Virtual Laboratory • Chemistry
+    </p>
+
+</footer>
+
+
+
+<script>
+
+
+// =====================================
+// DATA
+// =====================================
+
+const mixtures = {
+
+    sandwater: {
+        name: "Sand + Water",
+        correct: "filtration"
+    },
+
+    saltwater: {
+        name: "Salt + Water",
+        correct: "evaporation"
+    },
+
+    ink: {
+        name: "Ink / Dye Mixture",
+        correct: "chromatography"
+    },
+
+    ethanolwater: {
+        name: "Ethanol + Water",
+        correct: "distillation"
+    }
+
+};
+
+
+
+let step = 0;
+
+let timer;
+
+
+
+// =====================================
+// MIXTURE CHANGE
+// =====================================
+
+function changeMixture() {
+
+    const mixture =
+        document.getElementById("mixture").value;
+
+
+    const data =
+        mixtures[mixture];
+
+
+    document.getElementById("stageTitle")
+        .textContent =
+        data.name;
+
+
+    document.getElementById("stageDescription")
+        .textContent =
+        "Choose the separation method you think is most appropriate.";
+
+}
+
+
+
+// =====================================
+// START EXPERIMENT
+// =====================================
+
+function startExperiment() {
+
+    clearInterval(timer);
+
+
+    step = 0;
+
+
+    const mixture =
+        document.getElementById("mixture").value;
+
+
+    const method =
+        document.getElementById("method").value;
+
+
+    const data =
+        mixtures[mixture];
+
+
+    if (method !== data.correct) {
+
+        document.getElementById("stageTitle")
+            .textContent =
+            "Try Again";
+
+
+        document.getElementById("stageDescription")
+            .textContent =
+
+            "The selected method is not the most suitable " +
+            "method for this mixture. Think about the " +
+            "physical properties of the substances.";
+
+
+        document.getElementById("observation")
+            .textContent =
+
+            "The method selected was " +
+            method +
+            ". Review the separation methods and try again.";
+
+        return;
+
+    }
+
+
+    const stages = [
+
+        {
+            title: "Prepare the Apparatus",
+            description:
+            "The virtual laboratory equipment is prepared for the selected separation method.",
+            icon: "🧪"
+        },
+
+        {
+            title: "Begin Separation",
+            description:
+            "The components of the mixture begin to separate according to their physical properties.",
+            icon: "⚗️"
+        },
+
+        {
+            title: "Observe the Process",
+            description:
+            "Observe the separation of the components and record what happens.",
+            icon: "🔬"
+        },
+
+        {
+            title: "Separation Complete",
+            description:
+            "The mixture has been separated using the selected method.",
+            icon: "✅"
+        }
+
+    ];
+
+
+    function runStep() {
+
+        if (step >= stages.length) {
+
+            clearInterval(timer);
+
+            finishExperiment(
+                data.name,
+                method
+            );
+
+            return;
+
+        }
+
+
+        const current =
+            stages[step];
+
+
+        document.getElementById("equipment")
+            .textContent =
+            current.icon;
+
+
+        document.getElementById("stageTitle")
+            .textContent =
+            current.title;
+
+
+        document.getElementById("stageDescription")
+            .textContent =
+            current.description;
+
+
+        const percentage =
+            ((step + 1) / stages.length) * 100;
+
+
+        document.getElementById("progressBar")
+            .style.width =
+            percentage + "%";
+
+
+        document.getElementById("stepText")
+            .textContent =
+
+            "Step " +
+            (step + 1) +
+            " of " +
+            stages.length;
+
+
+        step++;
+
+    }
+
+
+    runStep();
+
+
+    timer =
+        setInterval(runStep, 1800);
+
+}
+
+
+
+// =====================================
+// FINISH
+// =====================================
+
+function finishExperiment(
+    mixture,
+    method
+) {
+
+    document.getElementById("observation")
+        .innerHTML =
+
+        "<strong>Observation:</strong><br><br>" +
+
+        mixture +
+        " was separated using " +
+        method +
+        ". " +
+
+        "The separation works because the " +
+        "components have different physical properties.";
+
+
+    document.getElementById("conclusion")
+        .textContent =
+
+        "The experiment demonstrates that " +
+        mixture +
+        " can be separated effectively using " +
+        method +
+        ". The choice of separation method depends " +
+        "on the physical properties of the components.";
+
+}
+
+
+
+// =====================================
+// RESET EXPERIMENT
+// =====================================
+
+function resetExperiment() {
+
+    clearInterval(timer);
+
+
+    step = 0;
+
+
+    document.getElementById("equipment")
+        .textContent =
+        "🧪";
+
+
+    document.getElementById("stageTitle")
+        .textContent =
+        "Ready for Experiment";
+
+
+    document.getElementById("stageDescription")
+        .textContent =
+        "Select a mixture and separation method, then start the experiment.";
+
+
+    document.getElementById("progressBar")
+        .style.width =
+        "0%";
+
+
+    document.getElementById("stepText")
+        .textContent =
+        "Step 0 of 4";
+
+
+    document.getElementById("observation")
+        .textContent =
+        "Your experimental observation will appear here.";
+
+
+    document.getElementById("conclusion")
+        .textContent =
+        "Select an appropriate separation method and complete the virtual experiment.";
+
+}
+
+
+
+// =====================================
+// QUIZ
+// =====================================
+
+function markQuiz() {
+
+    const answers = {
+
+        q1: "a",
+        q2: "b",
+        q3: "a"
+
+    };
+
+
+    let score = 0;
+
+
+    Object.keys(answers)
+        .forEach(function(question) {
+
+            const selected =
+                document.querySelector(
+                    `input[name="${question}"]:checked`
+                );
+
+
+            if (
+                selected &&
+                selected.value === answers[question]
+            ) {
+
+                score++;
+
+            }
+
+        });
+
+
+    const percentage =
+        Math.round((score / 3) * 100);
+
+
+    document.getElementById("quizResult")
+        .textContent =
+
+        "Score: " +
+        score +
+        "/3 (" +
+        percentage +
+        "%)";
+
+}
+
+
+
+// =====================================
+// RESET QUIZ
+// =====================================
+
+function resetQuiz() {
+
+    document.getElementById("quizForm")
+        .reset();
+
+
+    document.getElementById("quizResult")
+        .textContent =
+        "";
+
+}
+
+
+
+// =====================================
+// YEAR
+// =====================================
+
+document.getElementById("year")
+    .textContent =
+    new Date().getFullYear();
+
+
+</script>
+
+
+</body>
+
+</html>
